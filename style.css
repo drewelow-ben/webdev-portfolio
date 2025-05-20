@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #63B8FF;
+    --text-color: #333333;
+    --background-light: #F8F8F8;
+    --border-color: #DDDDDD;
+}
+
+body {
+    background-color: var(--background-light); /* Off-white background for the entire page */
+    color: var(--text-color); /* Dark grey for all default text */
+    margin: 0; /* Remove default body margin */
+    padding: 20px; /* Add some padding around the content */
+    line-height: 1.6; /* Improve readability of paragraph text */
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color); /* Apply primary color to H2s */
+    margin-bottom: 20px; /* Add some space below headings */
+}
+
+/* Google Fonts */
+h2, h3 { /* Apply Oswald to H2 and H3 headings */
+    font-family: 'Oswald', sans-serif;
+}
+
+p, li, a { /* Apply Open Sans to paragraph, list items, and links */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.featured-projects {
+    display: flex;
+    justify-content: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.project {
+    border: 1px solid var(--border-color); /* Use light grey for borders */
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #fff; /* White background for project cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Adjustments for project hover from your JS */
+.project:hover {
+    transform: scale(1.03); /* Slightly larger scale on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+h2 {
+    text-align: center; 
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  margin-right: 20px; 
+}
+
+.about-me-content p {
+  margin: 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-button {
+    padding: 12px 25px; /* Slightly larger padding */
+    background-color: var(--primary-color); /* Primary color for the button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold; /* Make the button text bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-button:hover {
+    background-color: var(--secondary-color); /* Lighter blue on hover */
+}
+.skills {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+.skills li {
+    background-color: white; /* White background for skill tags */
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.skills li:hover {
+    background-color: var(--secondary-color); /* Secondary color on hover */
+    color: white; /* White text on hover for better contrast */
+    border-color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+    .featured-projects {
+        flex-direction: column;
+    }
+    .project {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about-me-content {
+        flex-direction: column;
+    }
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .skills ul {
+        flex-direction: column;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.about-me, .skills, .featured-projects {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 40px; /* Add space between sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for sections */
+    max-width: 900px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Remove the br tags from your HTML, these CSS margins handle spacing now */
