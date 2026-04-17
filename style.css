@@ -74,7 +74,7 @@ h2 {
   width: 100%;
 }
 
-.contact-button {
+.btn {
     padding: 12px 25px; /* Slightly larger padding */
     background-color: var(--primary-color); /* Primary color for the button */
     color: white;
@@ -84,33 +84,28 @@ h2 {
     transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
-.contact-button:hover {
+.btn:hover {
     background-color: var(--secondary-color); /* Lighter blue on hover */
 }
-/* Container to hold both buttons side-by-side */
-.contact-buttons-container {
+/* This ensures the section handles the two buttons correctly */
+#contact {
     display: flex;
-    gap: 15px; /* Adds space between the buttons */
+    flex-wrap: wrap; /* Allows buttons to stack on small mobile screens */
+    gap: 10px;       /* Puts space between the buttons */
     align-items: center;
-    justify-content: flex-start; /* Keeps them on the left, use 'center' if you want them centered */
-    margin-top: 20px;
 }
 
-/* Specific styling for the LinkedIn button */
+/* This styles the LinkedIn button specifically while inheriting your '.btn' styles */
 .linkedin-btn {
     background-color: #0077b5; /* LinkedIn Blue */
     color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    border: none;
 }
 
-/* Hover effect for the LinkedIn button */
+/* Optional: change color on hover for the LinkedIn button */
 .linkedin-btn:hover {
     background-color: #005582;
-}
+    color: white;
 
 .skills {
   margin-top: 30px;
