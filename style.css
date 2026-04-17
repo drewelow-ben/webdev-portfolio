@@ -6,173 +6,172 @@
     --border-color: #DDDDDD;
 }
 
+/* --- Base Styles --- */
 body {
-    background-color: var(--background-light); /* Off-white background for the entire page */
-    color: var(--text-color); /* Dark grey for all default text */
-    margin: 0; /* Remove default body margin */
-    padding: 20px; /* Add some padding around the content */
-    line-height: 1.6; /* Improve readability of paragraph text */
+    background-color: var(--background-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
-    color: var(--primary-color); /* Apply primary color to H2s */
-    margin-bottom: 20px; /* Add some space below headings */
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
-/* Google Fonts */
-h2, h3 { /* Apply Oswald to H2 and H3 headings */
-    font-family: 'Oswald', sans-serif;
-}
-
-p, li, a { /* Apply Open Sans to paragraph, list items, and links */
+p, li, a {
     font-family: 'Open Sans', sans-serif;
 }
 
-.featured-projects {
-    display: flex;
-    justify-content: center; 
-    max-width: 800px; 
-    margin: 0 auto; 
+img {
+    max-width: 100%;
+    height: auto;
 }
-.project {
-    border: 1px solid var(--border-color); /* Use light grey for borders */
+
+/* --- Layout Containers --- */
+.about-me, .skills, .featured-projects {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 40px;
     border-radius: 10px;
-    padding: 10px;
-    margin-right: 20px;
-    background-color: #fff; /* White background for project cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Adjustments for project hover from your JS */
-.project:hover {
-    transform: scale(1.03); /* Slightly larger scale on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
-}
-h2 {
-    text-align: center; 
-}
-
+/* --- About Me Section --- */
 .about-me-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-picture {
-  border-radius: 50%;
-  margin-right: 20px; 
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .about-me-content p {
-  margin: 0;
+    margin: 0;
 }
+
+/* --- Contact & Buttons --- */
 .button-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adds space between the two buttons */
+    width: 100%;
+    margin-top: 20px;
 }
 
 .btn {
-    padding: 12px 25px; /* Slightly larger padding */
-    background-color: var(--primary-color); /* Primary color for the button */
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold; /* Make the button text bold */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-}
-
-.btn:hover {
-    background-color: var(--secondary-color); /* Lighter blue on hover */
-}
-/* This ensures the section handles the two buttons correctly */
-#contact {
-    display: flex;
-    flex-wrap: wrap; /* Allows buttons to stack on small mobile screens */
-    gap: 10px;       /* Puts space between the buttons */
-    align-items: center;
-}
-
-/* This styles the LinkedIn button specifically while inheriting your '.btn' styles */
-.linkedin-btn {
-    background-color: #0077b5; /* LinkedIn Blue */
-    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
     border: none;
 }
 
-/* Optional: change color on hover for the LinkedIn button */
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.linkedin-btn {
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+
 .linkedin-btn:hover {
     background-color: #005582;
-    color: white;
+}
 
+/* --- Skills Section --- */
 .skills {
-  margin-top: 30px;
-  text-align: center;
+    margin-top: 30px;
 }
 
 .skills h2 {
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
 .skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center; 
-  gap: 20px; 
-  flex-wrap: wrap; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .skills li {
-    background-color: white; /* White background for skill tags */
+    background-color: white;
     color: var(--text-color);
     padding: 10px 15px;
     border-radius: 20px;
     border: 1px solid var(--border-color);
     font-size: 0.9em;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .skills li:hover {
-    background-color: var(--secondary-color); /* Secondary color on hover */
-    color: white; /* White text on hover for better contrast */
+    background-color: var(--secondary-color);
+    color: white;
     border-color: var(--secondary-color);
 }
 
+/* --- Featured Projects Section --- */
+.featured-projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Makes cards grow equally */
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Design --- */
 @media (max-width: 600px) {
     .featured-projects {
         flex-direction: column;
     }
-    .project {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
     .about-me-content {
         flex-direction: column;
+        text-align: center;
     }
     .profile-picture {
         margin-right: 0;
         margin-bottom: 20px;
     }
     .skills ul {
-        flex-direction: column;
+        gap: 10px;
     }
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-.about-me, .skills, .featured-projects {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 40px; /* Add space between sections */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for sections */
-    max-width: 900px; /* Limit width for better readability */
-    margin-left: auto;
-    margin-right: auto;
+    .button-container {
+        flex-direction: column; /* Stacks buttons on small phones */
+    }
 }
