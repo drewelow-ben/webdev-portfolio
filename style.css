@@ -87,6 +87,31 @@ h2 {
 .contact-button:hover {
     background-color: var(--secondary-color); /* Lighter blue on hover */
 }
+/* Container to hold both buttons side-by-side */
+.contact-buttons-container {
+    display: flex;
+    gap: 15px; /* Adds space between the buttons */
+    align-items: center;
+    justify-content: flex-start; /* Keeps them on the left, use 'center' if you want them centered */
+    margin-top: 20px;
+}
+
+/* Specific styling for the LinkedIn button */
+.linkedin-btn {
+    background-color: #0077b5; /* LinkedIn Blue */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the LinkedIn button */
+.linkedin-btn:hover {
+    background-color: #005582;
+}
+
 .skills {
   margin-top: 30px;
   text-align: center;
