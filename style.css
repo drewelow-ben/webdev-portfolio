@@ -48,9 +48,10 @@ img {
     margin-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: 1000px;
+    max-width: 900px; /* Lock this at 900px for all sections */
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box; /* CRITICAL: Includes padding in the 900px width */
 }
 
 /* --- About Me Section --- */
@@ -147,7 +148,6 @@ img {
     justify-content: center;
     gap: 20px;
     /* Increased this slightly so 3 cards + gaps + padding fit comfortably */
-    max-width: 1000px; 
 }
 
 .featured-projects h2 {
@@ -159,16 +159,21 @@ img {
 .project {
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 15px; /* Increased padding slightly for better look */
+    padding: 15px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    /* Logic: (100% / 3) minus the share of the gaps */
+    /* Math: (100% / 3) minus the gaps. 
+       We use 20px gaps, so we subtract about 14px from each card.
+    */
     flex: 0 1 calc(33.333% - 14px); 
     
-    /* Lowered min-width so they stay side-by-side longer on smaller screens */
-    min-width: 250px; 
+    /* Lower this to 240px. 
+       If this is 280px, 3 cards + gaps = 880px, which is 
+       wider than your 840px usable space! 
+    */
+    min-width: 240px; 
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
