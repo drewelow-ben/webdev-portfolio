@@ -207,6 +207,22 @@ img {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.read-more-btn:hover {
+    color: var(--secondary-color);
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 850px) {
     .featured-projects {
