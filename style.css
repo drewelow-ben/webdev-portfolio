@@ -139,8 +139,14 @@ img {
 /* --- Featured Projects Section --- */
 .featured-projects {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+.featured-projects h2 {
+    flex: 0 0 100%;          /* Forces the H2 to take up the full width */
+    text-align: center;
+    margin-bottom: 10px;     /* Adjust spacing below the title */
 }
 
 .project {
@@ -150,7 +156,8 @@ img {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1; /* Makes cards grow equally */
+    flex: 1 1 300px; 
+    max-width: 400px;
 }
 
 .project:hover {
