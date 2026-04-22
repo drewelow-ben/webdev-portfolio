@@ -17,3 +17,14 @@ projects.forEach(project => {
         }
     });
 });
+function toggleText(btn) {
+    const moreText = btn.previousElementSibling;
+    
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        btn.innerHTML = " read less";
+    } else {
+        moreText.style.display = "none";
+        btn.innerHTML = "...more";
+    }
+}
