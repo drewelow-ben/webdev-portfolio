@@ -28,6 +28,9 @@ h2 {
 p, li, a {
     font-family: 'Open Sans', sans-serif;
 }
+.proj-description {
+    font-size: 10pt;
+}
 
 img {
     max-width: 100%;
