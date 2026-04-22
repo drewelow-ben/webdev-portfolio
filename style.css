@@ -48,7 +48,7 @@ img {
     margin-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: 900px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -147,7 +147,7 @@ img {
     justify-content: center;
     gap: 20px;
     /* Increased this slightly so 3 cards + gaps + padding fit comfortably */
-    max-width: 900px; 
+    max-width: 1000px; 
 }
 
 .featured-projects h2 {
