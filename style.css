@@ -166,6 +166,11 @@ img {
     min-width: 280px; /* Prevents them from getting too thin */
     box-sizing: border-box; /* Ensures padding doesn't break the width math */
 }
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
 
 .project:hover {
     transform: scale(1.03);
